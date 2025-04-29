@@ -1,0 +1,63 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "183": [
+      183
+    ],
+    "main": [
+      354,
+      869,
+      792
+    ],
+    "runtime~main": [
+      792,
+      869,
+      354
+    ],
+    "styles": [
+      354,
+      792,
+      869
+    ]
+  },
+  "assets": {
+    "183": {
+      "js": [
+        {
+          "file": "assets/js/183.ca2ef60e.js",
+          "hash": "ab4ba28bf95cee477148",
+          "publicPath": "/nguyenhaiha1988/assets/js/183.ca2ef60e.js"
+        }
+      ]
+    },
+    "354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.f32444af.js",
+          "hash": "bbf4830195cad714ffaa",
+          "publicPath": "/nguyenhaiha1988/assets/js/runtime~main.f32444af.js"
+        }
+      ]
+    },
+    "792": {
+      "js": [
+        {
+          "file": "assets/js/main.1c842453.js",
+          "hash": "2e87fec5923237443557",
+          "publicPath": "/nguyenhaiha1988/assets/js/main.1c842453.js"
+        }
+      ]
+    },
+    "869": {
+      "css": [
+        {
+          "file": "assets/css/styles.24b71aa9.css",
+          "hash": "43739d805e6b09050e82",
+          "publicPath": "/nguyenhaiha1988/assets/css/styles.24b71aa9.css"
+        }
+      ]
+    }
+  }
+}
