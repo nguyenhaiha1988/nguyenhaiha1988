@@ -1,0 +1,47 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Branch chính để trigger deploy
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # Docusaurus hoạt động ổn định hơn với Node.js 18
+
+      - name: Install dependencies
+        run: npm ci  # Cài đặt dependencies nhanh hơn, đáng tin cậy hơn
+
+      - name: Build website
+        run: npm run build  # Chạy lệnh build website
+
+      - name: Deploy website
+        env:
+          GIT_USER: ${{ github.actor }}  # Sử dụng GitHub username của người chạy workflow
+          USE_SSH: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Dùng token GitHub để push lên gh-pages
+        run: |
+          git checkout --orphan gh-pages
+          git rm -rf .
+          cp -r build/* .
+          git add .
+          git commit -m "Deploy Docusaurus site"
+          git push -f origin gh-pages
