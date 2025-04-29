@@ -2,30 +2,30 @@
 sidebar_position: 5
 ---
 
-# Deploy your site
+# Triển khai trang web của bạn
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+Docusaurus là một **trình tạo trang tĩnh** (cũng được gọi là **[Jamstack](https://jamstack.org/)**).
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
+Nó xây dựng trang web của bạn thành các tệp **HTML, JavaScript và CSS tĩnh đơn giản**.
 
-## Build your site
+## Xây dựng trang web của bạn
 
-Build your site **for production**:
+Xây dựng trang web của bạn **cho môi trường sản xuất**:
 
 ```bash
 npm run build
 ```
 
-The static files are generated in the `build` folder.
+Các tệp tĩnh sẽ được tạo ra trong thư mục `build`.
 
-## Deploy your site
+## Triển khai trang web của bạn
 
-Test your production build locally:
+Kiểm tra bản build cho môi trường sản xuất của bạn trên máy cục bộ:
 
 ```bash
 npm run serve
 ```
 
-The `build` folder is now served at `http://localhost:3000/`.
+Thư mục `build` hiện đang được phục vụ tại [http://localhost:3000/](http://localhost:3000/).
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+Bây giờ bạn có thể triển khai thư mục `build` **gần như ở bất cứ đâu** một cách dễ dàng, **miễn phí** hoặc với chi phí rất nhỏ (hãy đọc **[Hướng dẫn Triển khai](https://docusaurus.io/docs/deployment)**).

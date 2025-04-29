@@ -2,53 +2,55 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Tạo Tài Liệu
 
-Documents are **groups of pages** connected through:
+Tài liệu là **nhóm các trang** được kết nối qua:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- **sidebar** (thanh điều hướng bên trái)
+- **điều hướng trước/sau** xuất hiện khi bạn đọc xong một trang tài liệu bất kỳ.
+- **phiên bản**: lưu trữ các phiên bản khác nhau, phù hợp với dự án phần mềm hoặc các tài liệu sản phẩm có tính chất thay đổi thường xuyên.
 
-## Create your first Doc
+## Tạo Tài Liệu Đầu Tiên Của Bạn
 
-Create a markdown file at `docs/hello.md`:
+Tạo một tệp Markdown tại `docs/hello.md`:
 
 ```md title="docs/hello.md"
-# Hello
+# Xin chào
 
-This is my **first Docusaurus document**!
+Đây là **tài liệu Docusaurus đầu tiên** của tôi!
 ```
 
-A new document is now available at `http://localhost:3000/docs/hello`.
+Một tài liệu mới giờ đã sẵn sàng tại [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
 
-## Configure the Sidebar
+## Cấu Hình Sidebar
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+Docusaurus sẽ tự động **tạo sidebar** từ thư mục `docs`.
 
-Add metadatas to customize the sidebar label and position:
+Thêm metadata để tùy chỉnh nhãn và vị trí của sidebar:
 
 ```md title="docs/hello.md" {1-4}
 ---
-sidebar_label: 'Hi!'
+sidebar_label: 'Xin chào!'
 sidebar_position: 3
 ---
 
-# Hello
+# Xin chào
 
-This is my **first Docusaurus document**!
+Đây là **tài liệu Docusaurus đầu tiên** của tôi!
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+Bạn cũng có thể tạo sidebar một cách rõ ràng trong `sidebars.js`:
 
-```diff title="sidebars.js"
-module.exports = {
+```js title="sidebars.js"
+export default {
   tutorialSidebar: [
+    'intro',
+    // highlight-next-line
+    'hello',
     {
       type: 'category',
-      label: 'Tutorial',
--     items: [...],
-+     items: ['hello'],
+      label: 'Hướng Dẫn',
+      items: ['tutorial-basics/create-a-document'],
     },
   ],
 };

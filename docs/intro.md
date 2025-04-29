@@ -2,34 +2,46 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Khởi động
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Hãy khám phá **Docusaurus trong chưa đầy 5 phút**.
 
-## Getting Started
+## Bắt đầu
 
-Get started by **creating a new site**.
+Bắt đầu bằng cách **tạo một trang web mới**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Hoặc **thử Docusaurus ngay lập tức** với **[docusaurus.new](https://docusaurus.new)**.
 
-## Generate a new site
+### Những gì bạn sẽ cần
 
-Generate a new Docusaurus site using the **classic template**:
+- [Node.js](https://nodejs.org/en/download/) phiên bản 18.0 hoặc cao hơn:
+  - Khi cài đặt Node.js, bạn nên đánh dấu vào tất cả các ô liên quan đến các phụ thuộc.
 
-```shell
-npx @docusaurus/init@latest init my-website classic
+## Tạo một trang web mới
+
+Tạo một trang Docusaurus mới bằng cách sử dụng **mẫu classic**. Trong câu lệnh dưới đây, `my-website` là tên thư mục website bạn muốn tạo ra còn `classic` là tên mẫu website bạn sử dụng.
+
+Mẫu classic sẽ tự động được thêm vào dự án của bạn sau khi bạn chạy lệnh:
+
+```bash
+npm init docusaurus@latest my-website classic
 ```
 
-## Start your site
+Bạn có thể nhập lệnh này vào Command Prompt, Powershell, Terminal hoặc bất kỳ terminal tích hợp nào của trình soạn thảo mã của bạn.
 
-Run the development server:
+Lệnh này cũng cài đặt tất cả các phụ thuộc cần thiết để bạn chạy Docusaurus.
 
-```shell
+## Khởi động trang web của bạn
+
+Chạy máy chủ phát triển:
+
+```bash
 cd my-website
-
-npx docusaurus start
+npm run start
 ```
 
-Your site starts at `http://localhost:3000`.
+Lệnh `cd` thay đổi thư mục mà bạn đang làm việc. Để làm việc với trang Docusaurus mới tạo, bạn cần điều hướng terminal đến đó.
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+Lệnh `npm run start` xây dựng trang web của bạn cục bộ và phục vụ nó thông qua một máy chủ phát triển, sẵn sàng cho bạn xem tại http://localhost:3000/.
+
+Mở `docs/intro.md` (trang này) và chỉnh sửa một số dòng: trang web sẽ **tự động tải lại** và hiển thị các thay đổi của bạn.

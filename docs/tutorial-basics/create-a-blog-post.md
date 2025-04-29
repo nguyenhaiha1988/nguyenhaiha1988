@@ -2,33 +2,33 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# Tạo Bài Viết Blog
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+Docusaurus tạo ra **một trang cho mỗi bài viết blog**, cùng với **trang chỉ mục blog**, **hệ thống thẻ tag**, nguồn cấp **RSS**...
 
-## Create your first Post
+## Tạo Bài Viết Đầu Tiên Của Bạn
 
-Create a file at `blog/2021-02-28-greetings.md`:
+Tạo một tệp tại `blog/2021-02-28-greetings.md`:
 
 ```md title="blog/2021-02-28-greetings.md"
 ---
 slug: greetings
-title: Greetings!
+title: Xin Chào!
 authors:
   - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
+    title: Đồng sáng tạo Docusaurus 1
     url: https://github.com/JoelMarcey
     image_url: https://github.com/JoelMarcey.png
   - name: Sébastien Lorber
-    title: Docusaurus maintainer
+    title: Người duy trì Docusaurus
     url: https://sebastienlorber.com
     image_url: https://github.com/slorber.png
 tags: [greetings]
 ---
-
-Congratulations, you have made your first post!
-
-Feel free to play around and edit this post as much you like.
 ```
 
-A new blog post is now available at `http://localhost:3000/blog/greetings`.
+Chúc mừng, bạn đã viết bài đầu tiên của mình!
+
+Hãy thoải mái thử nghiệm và chỉnh sửa bài viết này theo ý thích của bạn.
+
+Một bài viết blog mới giờ đã sẵn sàng tại [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
