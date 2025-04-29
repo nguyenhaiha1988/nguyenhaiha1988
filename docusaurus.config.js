@@ -13,16 +13,14 @@ const config = {
   tagline: 'Dinosaurs thật tuyệt vời!',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://nguyenhaiha1988.github.io',  // Địa chỉ GitHub Pages của bạn
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/nguyenhaiha1988/',  // Base URL phù hợp với repository của bạn
+  // --- Cấu hình URL và BaseURL ---
+  url: 'https://nguyenhaiha1988.github.io',  // Địa chỉ GitHub Pages
+  baseUrl: '/nguyenhaiha1988/',              // Base URL theo tên repo
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nguyenhaiha1988', // Tên GitHub user của bạn
-  projectName: 'nguyenhaiha1988', // Tên repo của bạn
+  // --- Thêm phần cần thiết để deploy từ nhánh main ---
+  organizationName: 'nguyenhaiha1988', // GitHub username
+  projectName: 'nguyenhaiha1988',       // Tên repo
+  deploymentBranch: 'main',             // <- THÊM DÒNG NÀY
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,7 +37,6 @@ const config = {
 
   plugins: [
     require.resolve('docusaurus-lunr-search'),
-    // Trang tài liệu 1
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -49,7 +46,6 @@ const config = {
         sidebarPath: require.resolve('./sidebars-cong-nghe.js'),
       },
     ],
-    // Trang tài liệu 2
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -59,7 +55,6 @@ const config = {
         sidebarPath: require.resolve('./sidebars-phat-trien-ban-than.js'),
       },
     ],
-    // Trang tài liệu 3
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -69,8 +64,6 @@ const config = {
         sidebarPath: require.resolve('./sidebars-sach-hay.js'),
       },
     ],
-    // Cài đặt cùng lúc nhiều blog
-    // Blog thứ 2
     [
       '@docusaurus/plugin-content-blog',
       {
@@ -152,22 +145,13 @@ const config = {
           label: 'Multi-Docs',
           position: 'left',
           items: [
-            {
-              label: 'Công Nghệ',
-              to: '/cong-nghe/intro',
-            },
-            {
-              label: 'Phát Triển Bản Thân',
-              to: '/phat-trien-ban-than/intro',
-            },
-            {
-              label: 'Sách Hay',
-              to: '/sach-hay/intro',
-            },
+            {label: 'Công Nghệ', to: '/cong-nghe/intro'},
+            {label: 'Phát Triển Bản Thân', to: '/phat-trien-ban-than/intro'},
+            {label: 'Sách Hay', to: '/sach-hay/intro'},
           ],
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        { to: '/blog-hoc-tap', label: 'Blog Học Tập', position: 'left' },
+        {to: '/blog-hoc-tap', label: 'Blog Học Tập', position: 'left'},
         {
           href: 'https://github.com/nguyenhaiha1988/nguyenhaiha1988',
           label: 'GitHub',
@@ -181,41 +165,21 @@ const config = {
       links: [
         {
           title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
+          items: [{label: 'Tutorial', to: '/docs/intro'}],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            {label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus'},
+            {label: 'Discord', href: 'https://discordapp.com/invite/docusaurus'},
+            {label: 'X', href: 'https://x.com/docusaurus'},
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/nguyenhaiha1988/nguyenhaiha1988',
-            },
+            {label: 'Blog', to: '/blog'},
+            {label: 'GitHub', href: 'https://github.com/nguyenhaiha1988/nguyenhaiha1988'},
           ],
         },
       ],
